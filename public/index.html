@@ -271,9 +271,9 @@
           <h3>Free ways to start</h3>
           <p class="free-sub">You only need one provider.</p>
           <dl>
-            <div><dt>Google Gemini</dt><dd>Has a free tier.</dd></div>
-            <div><dt>OpenRouter</dt><dd>Has free models, marked in the model picker.</dd></div>
-            <div><dt>NVIDIA NIM</dt><dd>Gives free credits.</dd></div>
+            <div><dt>Google Gemini</dt><dd>A free tier on a project without billing. Image generation is paid.</dd></div>
+            <div><dt>OpenRouter</dt><dd>Free models, 50 requests a day per key (1,000 after $10 in credits).</dd></div>
+            <div><dt>NVIDIA NIM</dt><dd>Free Endpoints on 20 hosted models, for development, 40 requests a minute.</dd></div>
             <div><dt>Ollama</dt><dd>Runs models on your own computer, with no key and no account.</dd></div>
           </dl>
         </div>
@@ -310,6 +310,10 @@
           <details>
             <summary>Is it free?</summary>
             <p>Yes. Every feature in the plugin today is free, with no tier, no account and no license key, and it stays that way. If paid options appear later, they will be new things built on top, never a lock on something that already worked. You pay your AI provider directly; the plugin takes no cut.</p>
+          </details>
+          <details>
+            <summary>Which models can I use for free?</summary>
+            <p>Each provider has its own rule, and the model list in Settings shows the limit next to each free model. <b>Gemini</b>: the Flash models, 2.5 Pro, embeddings and Gemma, on a project without billing, where Google may use what you send to improve its products; image generation is always paid. <b>OpenRouter</b>: models priced at zero, 20 requests a minute and 50 a day per key, or 1,000 a day once the account has bought $10 in credits. <b>NVIDIA NIM</b>: only the models NVIDIA marks Free Endpoint, for development and testing, up to 40 requests a minute. <b>Ollama</b>: any local model.</p>
           </details>
           <details>
             <summary>Does the agent work on mobile?</summary>
