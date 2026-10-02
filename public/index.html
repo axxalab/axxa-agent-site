@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; script-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>AXXA Agent: the AI agent for Obsidian, built for your phone first</title>
 <meta name="description" content="Chat with AI, ask your vault with cited answers, and let an agent edit your notes in Obsidian, on your phone and desktop. OpenAI, Claude, Gemini, OpenRouter, NVIDIA NIM or local Ollama, with your own API key. Free and open source.">
 <link rel="canonical" href="https://agent.axxalab.com.br/">
@@ -12,143 +12,365 @@
 <link rel="alternate" hreflang="x-default" href="https://agent.axxalab.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AXXA Agent">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="AXXA Agent: the AI agent for Obsidian, built for your phone first">
 <meta property="og:description" content="Chat, ask your vault with cited answers, and let an agent edit your notes. Six providers, your own key, everything in Markdown.">
 <meta property="og:url" content="https://agent.axxalab.com.br/">
 <meta property="og:image" content="https://agent.axxalab.com.br/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AXXA Agent, the AI agent for Obsidian, next to a phone showing a cited answer from a vault">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#6c5ce7">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AXXA Agent", "applicationCategory": "ProductivityApplication", "applicationSubCategory": "Obsidian plugin", "operatingSystem": "Windows, macOS, Linux, Android, iOS (Obsidian 1.11.4+)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "license": "https://www.gnu.org/licenses/gpl-3.0.html", "url": "https://agent.axxalab.com.br/", "downloadUrl": "https://community.obsidian.md/plugins/axxa-agent", "image": "https://agent.axxalab.com.br/assets/og.png", "author": {"@type": "Organization", "name": "AXXA Lab™", "url": "https://agent.axxalab.com.br/"}}</script>
 </head>
 <body>
-<header class="top"><div class="wrap">
-  <a class="brand" href="/">AXXA <span>Agent</span></a>
-  <nav aria-label="Main">
-    <a class="opt" href="#features">Features</a>
-    <a class="opt" href="#start">Get started</a>
-    <a class="opt" href="#privacy">Privacy</a>
-    <a class="opt" href="#faq">FAQ</a>
-    <a href="https://github.com/axxalab/axxa-agent">GitHub</a>
-    <a class="lang" href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a>
-  </nav>
-</div></header>
+<a class="skip" href="#main">Skip to content</a>
 
-<main>
-<div class="wrap hero">
-  <div>
-    <div class="eyebrow">Obsidian plugin · desktop and mobile</div>
-    <h1>The AI agent for Obsidian, <em>built for your phone first.</em></h1>
-    <p class="lede">Chat, ask your vault and get answers that cite your notes, and let an agent edit your notes. It asks before every change. Six providers, your own API key, everything saved as Markdown.</p>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="wordmark" href="/"><span class="wm-name">AXXA</span> <span class="wm-prod">Agent</span><span class="wm-by">by AXXA Lab™</span></a>
+    <nav class="head-nav" aria-label="Main">
+      <ul>
+        <li><a href="#modes">Features</a></li>
+        <li><a href="#start">Get started</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://github.com/axxalab/axxa-agent">GitHub</a></li>
+        <li class="lang"><a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a></li>
+      </ul>
+    </nav>
+    <details class="menu">
+      <summary>Menu<span class="menu-icon" aria-hidden="true"></span></summary>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#modes">Features</a></li>
+          <li><a href="#start">Get started</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent">GitHub</a></li>
+          <li><a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a></li>
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="wrap hero" aria-labelledby="hero-title">
+  <div class="hero-top">
+    <p class="kicker mono"><span class="obsidian-chip" aria-hidden="true"></span>Obsidian plugin · desktop and mobile</p>
+    <h1 id="hero-title">The AI agent for Obsidian, built for your phone first.</h1>
+    <p class="lede">Chat with a model, ask your vault and get answers that cite your notes, or hand edits to an agent that asks before every change.</p>
     <div class="ctas">
-      <a class="btn primary" href="https://community.obsidian.md/plugins/axxa-agent">Add to Obsidian</a>
-      <a class="btn ghost" href="obsidian://show-plugin?id=axxa-agent">Open in the Obsidian app</a>
+      <a class="btn btn-primary" href="https://community.obsidian.md/plugins/axxa-agent">Add to Obsidian<svg class="arr" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+      <a class="btn btn-line" href="obsidian://show-plugin?id=axxa-agent">Open in the Obsidian app</a>
     </div>
-    <p class="fine"><b>Free</b> · open source (GPL-3.0) · no account · no telemetry</p>
-  </div>
-  <figure class="media">
-    <div class="phone">
-      <picture>
-        <source srcset="/assets/demo-phone-still.png" media="(prefers-reduced-motion: reduce)">
-        <img src="/assets/demo-phone.gif" width="360" height="593" alt="A question about the vault, answered with links to the notes it came from, on the Obsidian mobile layout">
-      </picture>
-    </div>
-    <figcaption class="caption">Real recording. Local model: qwen3.5:9b through Ollama.</figcaption>
-  </figure>
-</div>
-
-<div class="wrap proof" aria-label="At a glance">
-  <div><b>6</b><span>AI providers, your own key</span></div>
-  <div><b>~440 KB</b><span>smaller than each of the 12 most-downloaded AI plugins</span></div>
-  <div><b>0</b><span>accounts, trackers or servers of ours</span></div>
-  <div><b>Passed</b><span>Obsidian's automated plugin review</span></div>
-</div>
-
-<section id="features"><div class="wrap">
-  <h2>What it does</h2>
-  <p class="sub">Three modes in one panel, designed for the Obsidian mobile drawer first and the same on desktop.</p>
-  <div class="grid">
-    <div class="card"><h3>Answers that cite your notes</h3><p>Vault Q&amp;A runs hybrid search (keyword and vector, re-ranked by your links) and cites the notes it used as wikilinks you can open.</p></div>
-    <div class="card"><h3>An agent that asks first</h3><p>It creates, edits, moves and deletes notes through a small set of tools. Changes wait for your OK, deletes go to your trash, and moves rewrite your links.</p></div>
-    <div class="card"><h3>Made for your phone</h3><p>The composer follows the keyboard, there is an optional fullscreen mode, and the agent works on the phone too.</p></div>
-    <div class="card"><h3>Six providers, your keys</h3><p>OpenAI, Anthropic, Google Gemini, OpenRouter, NVIDIA NIM and local Ollama. Keys live in your OS keychain.</p></div>
-    <div class="card"><h3>Small and fast</h3><p>About 440 KB of JavaScript, against a median of about 3.8 MB for the 12 most-downloaded AI plugins (measured October 2026).</p></div>
-    <div class="card"><h3>Everything is Markdown</h3><p>Chats, skills and cost reports are files in your vault, and a usage dashboard shows what you spend by provider, model and day.</p></div>
-  </div>
-</div></section>
-
-<section aria-label="Screenshots" class="tight"><div class="wrap">
-  <div class="shots">
-    <img src="/assets/ask-your-vault.jpg" width="230" height="409" alt="Vault Q&amp;A: an answer citing the meeting note" loading="lazy">
-    <img src="/assets/agent-asks-first.jpg" width="230" height="409" alt="The agent asks before moving a note" loading="lazy">
-    <img src="/assets/providers.jpg" width="230" height="409" alt="Model picker with six providers" loading="lazy">
-    <img src="/assets/usage.jpg" width="230" height="409" alt="Usage dashboard with tokens by model" loading="lazy">
-    <img src="/assets/home.jpg" width="230" height="409" alt="Home: recent chats and the three modes" loading="lazy">
-  </div>
-</div></section>
-
-<section id="start"><div class="wrap two">
-  <div>
-    <h2>Get started in a minute</h2>
-    <p class="sub">Requires Obsidian 1.11.4 or newer, on desktop or mobile.</p>
-    <ol class="steps">
-      <li>Open the <a href="https://community.obsidian.md/plugins/axxa-agent">AXXA Agent page</a> and choose <b>Add to Obsidian</b>, or search for <b>AXXA Agent</b> in Settings → Community plugins → Browse.</li>
-      <li>Install and enable it, then open <b>Settings → AXXA Agent → Providers</b>.</li>
-      <li>Add a key for one provider, or the address of your Ollama server (usually <code>http://localhost:11434</code>), and start a chat.</li>
-    </ol>
-  </div>
-  <div>
-    <h2>Free ways to start</h2>
-    <p class="sub">You only need one provider.</p>
-    <ul class="list">
-      <li><b>Google Gemini</b> has a free tier.</li>
-      <li><b>OpenRouter</b> has free models, marked in the model picker.</li>
-      <li><b>NVIDIA NIM</b> gives free credits.</li>
-      <li><b>Ollama</b> runs models on your own computer, with no key and no account.</li>
+    <ul class="hero-facts mono" aria-label="At a glance">
+      <li><b>Free</b><span>Open source, GPL-3.0</span></li>
+      <li><b>Your own key</b><span>Six providers, or a local model</span></li>
+      <li><b>No AXXA account</b><span>And no telemetry</span></li>
     </ul>
   </div>
-</div></section>
+  <figure class="fig hero-fig">
+    <div class="plate plate-hero">
+      <picture>
+        <source srcset="/assets/img/demo-phone-still.png" media="(prefers-reduced-motion: reduce)">
+        <img class="shot" src="/assets/img/demo-phone.gif" width="360" height="593" alt="A question about the vault, answered with links to the notes it came from, on Obsidian's mobile layout">
+      </picture>
+    </div>
+    <figcaption><span class="fig-n">Fig. 1</span> Vault Q&amp;A on Obsidian's mobile layout. The budget comes back cited to <span class="wl">[[2026-09-24 Northwind kickoff]]</span>. Real recording, local model qwen3.5:9b through Ollama.</figcaption>
+  </figure>
+</section>
 
-<section id="privacy"><div class="wrap">
-  <h2>Your notes stay yours</h2>
-  <p class="sub">No telemetry, no account, nothing sent to us.</p>
-  <div class="grid">
-    <div class="card"><h3>Keys on your device</h3><p>Stored in your OS keychain through Obsidian's secret storage, never in the plugin's settings file, so they don't travel through Sync or backups.</p></div>
-    <div class="card"><h3>Only the provider you chose</h3><p>Your notes leave the device only to the AI provider you picked, as part of a conversation or the Vault Q&amp;A index. The index itself stays in your vault.</p></div>
-    <div class="card"><h3>Offline with Ollama</h3><p>Chat and the agent run fully on your machine with a local model; Vault Q&amp;A then searches by keyword, because the embedding models are cloud services.</p></div>
+<section class="sec" id="spec" aria-labelledby="spec-title">
+  <div class="wrap">
+    <div class="sec-grid">
+      <p class="sec-label mono"><span class="n">01</span>Specification</p>
+      <div class="sec-main">
+        <h2 id="spec-title">What you’re installing</h2>
+        <table class="spec" role="table">
+          <caption class="vh">AXXA Agent specification</caption>
+          <tbody role="rowgroup">
+            <tr role="row"><th scope="row" role="rowheader">modes</th><td class="v" role="cell">3</td><td class="n" role="cell">Chat, Vault Q&amp;A and Agent, in one side panel.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">price</th><td class="v" role="cell">Free</td><td class="n" role="cell">No tier and no license key. You pay your AI provider directly; the plugin takes no cut.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">license</th><td class="v" role="cell">GPL-3.0</td><td class="n" role="cell"><a href="https://github.com/axxalab/axxa-agent">Source on GitHub</a>.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">requires</th><td class="v" role="cell"><span class="obsidian-chip" aria-hidden="true"></span>Obsidian 1.11.4+</td><td class="n" role="cell">Windows, macOS, Linux, Android and iOS.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">size</th><td class="v" role="cell">&lt; 500 KB</td><td class="n" role="cell">463 KB of JavaScript in version 0.9.21.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">providers</th><td class="v" role="cell">6</td><td class="n" role="cell">OpenAI, Anthropic, Google Gemini, OpenRouter, NVIDIA NIM, Ollama.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">api_keys</th><td class="v" role="cell">Your own</td><td class="n" role="cell">One per provider you use. Ollama needs none.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">storage</th><td class="v" role="cell">Markdown</td><td class="n" role="cell">Chats, skills and cost reports are notes in your vault.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">telemetry</th><td class="v" role="cell">None</td><td class="n" role="cell">Nothing is sent to AXXA Lab.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">review</th><td class="v" role="cell">Passed</td><td class="n" role="cell">Obsidian’s automated plugin review.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
-  <p class="after-grid">Every network request the plugin makes is listed in the <a href="https://github.com/axxalab/axxa-agent#disclosures">Disclosures</a>. This site's own practices are in the <a href="/privacy">privacy policy</a>.</p>
-</div></section>
+</section>
 
-<section id="faq"><div class="wrap">
-  <h2>Questions</h2>
-  <details><summary>Is it free?</summary><p>Yes. Every feature in the plugin today is free, with no tier, no account and no license key, and it stays that way. If paid options appear later, they will be new things built on top, never a lock on something that already worked. You pay your AI provider directly; the plugin takes no cut.</p></details>
-  <details><summary>Does the agent work on mobile?</summary><p>Yes. Chat, Vault Q&amp;A and the agent with its confirmations all run in the Obsidian mobile app. Cloud providers work anywhere; Ollama runs on a computer, so using it from a phone needs an Ollama server the phone can reach.</p></details>
-  <details><summary>What leaves my device?</summary><p>Only what goes to the provider you chose: your messages, what you attach, and the note excerpts that Vault Q&amp;A and the agent use. Nothing goes to us.</p></details>
-  <details><summary>Can I keep other AI plugins installed?</summary><p>Yes. AXXA runs in its own panel, its styles are scoped to that panel, and it doesn't depend on or replace other plugins.</p></details>
-  <details><summary>Where do I report a bug or ask a question?</summary><p>Bugs go to the <a href="https://github.com/axxalab/axxa-agent/issues/new?template=bug_report.yml">bug report form</a>, questions and ideas to <a href="https://github.com/axxalab/axxa-agent/discussions">Discussions</a>.</p></details>
-</div></section>
-
-<section class="tight"><div class="wrap cta-end">
-  <h2>Try it in your vault</h2>
-  <div class="ctas">
-    <a class="btn primary" href="https://community.obsidian.md/plugins/axxa-agent">Add to Obsidian</a>
-    <a class="btn ghost" href="obsidian://show-plugin?id=axxa-agent">Open in the Obsidian app</a>
+<section class="sec" id="modes" aria-labelledby="modes-title">
+  <div class="wrap">
+    <div class="sec-grid">
+      <p class="sec-label mono"><span class="n">02</span>Modes</p>
+      <div class="sec-main">
+        <h2 id="modes-title">Three modes in one panel</h2>
+      </div>
+    </div>
+    <div class="modes">
+      <div class="mode">
+        <h3>Chat</h3>
+        <div class="mode-text">
+          <p>Talk to the model you pick, from any of the six providers. Recent chats wait on the home screen.</p>
+        </div>
+        <figure class="fig">
+          <div class="plate"><img class="shot" src="/assets/img/screen-home-sm.png" srcset="/assets/img/screen-home-sm.png 450w, /assets/img/screen-home.png 900w" sizes="(min-width: 1024px) 340px, (min-width: 720px) 28vw, 330px" width="450" height="741" alt="Home screen: tokens this month, a recent chat, and buttons for Chat, Vault and Agent" loading="lazy"></div>
+          <figcaption><span class="fig-n">Fig. 2</span> Home. This month’s tokens, the last chat, and the three modes.</figcaption>
+        </figure>
+      </div>
+      <div class="mode">
+        <h3>Vault Q&amp;A</h3>
+        <div class="mode-text">
+          <p>Ask about your notes. The search runs three ways at once, and the answer cites the notes it used as links you can open.</p>
+          <dl class="how" aria-label="How a note is found">
+            <div><dt>keyword</dt><dd>Names, dates, rare terms.</dd></div>
+            <div><dt>vector</dt><dd>Meaning, so synonyms match.</dd></div>
+            <div><dt>links</dt><dd>A note linked from another match moves up.</dd></div>
+          </dl>
+        </div>
+        <figure class="fig">
+          <div class="plate"><picture><source media="(max-width: 719px)" srcset="/assets/img/crop-vault-sm.png 450w, /assets/img/crop-vault.png 900w" sizes="330px" width="450" height="400"><img class="shot" src="/assets/img/screen-vault-sm.png" srcset="/assets/img/screen-vault-sm.png 450w, /assets/img/screen-vault.png 900w" sizes="(min-width: 1024px) 340px, (min-width: 720px) 28vw, 330px" width="450" height="741" alt="Vault Q&amp;A: the launch moved to November 18, with both facts linked to the meeting note they came from" loading="lazy"></picture></div>
+          <figcaption><span class="fig-n">Fig. 3</span> When is the launch, and why did it move? Both facts cite <span class="wl">[[2026-09-24 Northwind kickoff]]</span>.</figcaption>
+        </figure>
+      </div>
+      <div class="mode">
+        <h3>Agent</h3>
+        <div class="mode-text">
+          <p>Creates, edits, moves and deletes notes through a small set of tools. Every change waits for your OK. Moves and deletes go through Obsidian itself, so your link and trash settings apply.</p>
+        </div>
+        <figure class="fig">
+          <div class="plate"><picture><source media="(max-width: 719px)" srcset="/assets/img/crop-agent-sm.png 450w, /assets/img/crop-agent.png 900w" sizes="330px" width="450" height="460"><img class="shot" src="/assets/img/screen-agent-sm.png" srcset="/assets/img/screen-agent-sm.png 450w, /assets/img/screen-agent.png 900w" sizes="(min-width: 1024px) 340px, (min-width: 720px) 28vw, 330px" width="450" height="741" alt="The agent asks before moving a note, showing the tool, the old path and the new one, with Deny, Approve all and Approve" loading="lazy"></picture></div>
+          <figcaption><span class="fig-n">Fig. 4</span> Before a move: the tool, the old path, the new one. Nothing changes until you approve.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="sub">
+      <h3 class="sub-label mono">On the phone</h3>
+      <ul class="facts">
+        <li><h3>Keyboard-aware</h3><p>The composer stays above the on-screen keyboard.</p></li>
+        <li><h3>Fullscreen if you want it</h3><p>An optional mode gives the panel the whole screen.</p></li>
+        <li><h3>Nothing left out</h3><p>All three modes, confirmations included, run in Obsidian’s mobile app.</p></li>
+      </ul>
+    </div>
   </div>
-</div></section>
+</section>
+
+<section class="sec" id="providers" aria-labelledby="providers-title">
+  <div class="wrap">
+    <div class="sec-grid">
+      <p class="sec-label mono"><span class="n">03</span>Providers</p>
+      <div class="sec-main split">
+        <div class="split-text">
+          <h2 id="providers-title">Six providers, your own key</h2>
+          <p class="body-l">Bring a key from any of them, or point the plugin at your own Ollama server. Keys are kept in your OS keychain, not in the plugin’s settings file.</p>
+          <ul class="provider-list mono">
+            <li>OpenAI</li>
+            <li>Anthropic</li>
+            <li>Google Gemini</li>
+            <li>OpenRouter</li>
+            <li>NVIDIA NIM</li>
+            <li>Ollama <span class="tag">local</span></li>
+          </ul>
+        </div>
+        <figure class="fig split-fig">
+          <div class="plate"><img class="shot" src="/assets/img/crop-models-sm.png" srcset="/assets/img/crop-models-sm.png 450w, /assets/img/crop-models.png 900w" sizes="(min-width: 1024px) 340px, (min-width: 720px) 36vw, 330px" width="450" height="394" alt="Model sheet: one tab per provider along the top, a local Qwen model selected, then Effort and Use my notes" loading="lazy"></div>
+          <figcaption><span class="fig-n">Fig. 5</span> The model sheet. One tab per provider, then effort and note context for this chat.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="size" aria-labelledby="size-title">
+  <div class="wrap">
+    <div class="sec-grid">
+      <p class="sec-label mono"><span class="n">04</span>Size</p>
+      <div class="sec-main">
+        <h2 id="size-title">Under 500&nbsp;KB of JavaScript</h2>
+        <p class="body-l measure">Smaller than each of the 12 most-downloaded AI plugins in the Obsidian directory. Their median is about 3.8&nbsp;MB.</p>
+        <figure class="chart">
+          <div class="bars" role="img" aria-label="Bar chart: AXXA Agent is about 0.46 MB; the median of the 12 most-downloaded AI plugins is about 3.8 MB.">
+            <div class="bar-row">
+              <p class="bar-head mono"><b>0.46 MB</b> AXXA Agent 0.9.21</p>
+              <span class="bar-track"><span class="bar-fill fill-axxa"></span></span>
+            </div>
+            <div class="bar-row">
+              <p class="bar-head mono"><b>~3.8 MB</b> Median of the 12 most-downloaded AI plugins</p>
+              <span class="bar-track"><span class="bar-fill fill-median"></span></span>
+            </div>
+            <div class="axis mono" aria-hidden="true"><span>0</span><span>1 MB</span><span>2 MB</span><span>3 MB</span><span>4 MB</span></div>
+          </div>
+          <figcaption><span class="fig-n">Fig. 6</span> Size of each plugin’s main.js. Measured October 2026.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="files" aria-labelledby="files-title">
+  <div class="wrap">
+    <div class="sec-grid">
+      <p class="sec-label mono"><span class="n">05</span>Files</p>
+      <div class="sec-main split">
+        <div class="split-text">
+          <h2 id="files-title">Everything is saved as Markdown</h2>
+          <p class="body-l">Chats, skills and cost reports are notes in your vault, so they sync, search and back up like the rest of it.</p>
+          <ul class="provider-list file-list mono" aria-label="Saved as Markdown">
+            <li>Chats <span class="tag">.md</span></li>
+            <li>Skills <span class="tag">.md</span></li>
+            <li>Cost reports <span class="tag">.md</span></li>
+          </ul>
+        </div>
+        <figure class="fig split-fig">
+          <div class="plate"><img class="shot" src="/assets/img/crop-usage-sm.png" srcset="/assets/img/crop-usage-sm.png 450w, /assets/img/crop-usage.png 900w" sizes="(min-width: 1024px) 340px, (min-width: 720px) 36vw, 330px" width="450" height="490" alt="Usage screen: 16k tokens over 7 chats, split into sent and received, with a chart over time" loading="lazy"></div>
+          <figcaption><span class="fig-n">Fig. 7</span> Usage. Tokens sent and received, for all time or the last 7, 30 or 90 days. <b>Report</b> saves it as a note.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="start" aria-labelledby="start-title">
+  <div class="wrap">
+    <div class="sec-grid">
+      <p class="sec-label mono"><span class="n">06</span>Setup</p>
+      <div class="sec-main">
+        <h2 id="start-title">Get started in a minute</h2>
+        <p class="body-l">Requires Obsidian 1.11.4 or newer, on desktop or mobile.</p>
+        <ol class="steps">
+          <li>
+            <h3>Add it</h3>
+            <p>Open the <a href="https://community.obsidian.md/plugins/axxa-agent">AXXA Agent page</a> and choose <b>Add to Obsidian</b>, or search for <b>AXXA Agent</b> in <b>Settings&nbsp;›&nbsp;Community plugins&nbsp;›&nbsp;Browse</b>.</p>
+          </li>
+          <li>
+            <h3>Enable it</h3>
+            <p>Install and enable it, then open <b>Settings&nbsp;›&nbsp;AXXA Agent&nbsp;›&nbsp;Providers</b>.</p>
+          </li>
+          <li>
+            <h3>Connect a provider</h3>
+            <p>Add a key for one provider, or the address of your Ollama server (usually <code>http://localhost:11434</code>), and start a chat.</p>
+          </li>
+        </ol>
+        <div class="free">
+          <h3>Free ways to start</h3>
+          <p class="free-sub">You only need one provider.</p>
+          <dl>
+            <div><dt>Google Gemini</dt><dd>Has a free tier.</dd></div>
+            <div><dt>OpenRouter</dt><dd>Has free models, marked in the model picker.</dd></div>
+            <div><dt>NVIDIA NIM</dt><dd>Gives free credits.</dd></div>
+            <div><dt>Ollama</dt><dd>Runs models on your own computer, with no key and no account.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="sec-grid">
+      <p class="sec-label mono"><span class="n">07</span>Privacy</p>
+      <div class="sec-main">
+        <h2 id="privacy-title">Your notes stay yours</h2>
+        <p class="body-l">What leaves your device goes to one place: the AI provider you picked.</p>
+        <ul class="facts">
+          <li><h3>Keys on your device</h3><p>Stored in your OS keychain through Obsidian’s secret storage, never in the plugin’s settings file, so they don’t travel through Sync or backups.</p></li>
+          <li><h3>Only the provider you chose</h3><p>Your notes leave the device only as part of a conversation or the Vault Q&amp;A index. The index itself stays in your vault.</p></li>
+          <li><h3>Offline with Ollama</h3><p>Chat and the agent run fully on your machine with a local model. Vault Q&amp;A then searches by keyword, because the embedding models are cloud services.</p></li>
+        </ul>
+        <p class="note">Every network request the plugin makes is listed in the <a href="https://github.com/axxalab/axxa-agent#disclosures">Disclosures</a>. This site’s own practices are in the <a href="/privacy">privacy policy</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="sec-grid">
+      <p class="sec-label mono"><span class="n">08</span>FAQ</p>
+      <div class="sec-main">
+        <h2 id="faq-title">Common questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Is it free?</summary>
+            <p>Yes. Every feature in the plugin today is free, with no tier, no account and no license key, and it stays that way. If paid options appear later, they will be new things built on top, never a lock on something that already worked. You pay your AI provider directly; the plugin takes no cut.</p>
+          </details>
+          <details>
+            <summary>Does the agent work on mobile?</summary>
+            <p>Yes. Chat, Vault Q&amp;A and the agent with its confirmations all run in the Obsidian mobile app. Cloud providers work anywhere; Ollama runs on a computer, so using it from a phone needs an Ollama server the phone can reach.</p>
+          </details>
+          <details>
+            <summary>What leaves my device?</summary>
+            <p>Only what goes to the provider you chose: your messages, what you attach, and the note excerpts that Vault Q&amp;A and the agent use. Nothing goes to AXXA Lab.</p>
+          </details>
+          <details>
+            <summary>Can I keep other AI plugins installed?</summary>
+            <p>Yes. AXXA Agent runs in its own panel, its styles are scoped to that panel, and it doesn’t depend on or replace other plugins.</p>
+          </details>
+          <details>
+            <summary>Where do I report a bug or ask a question?</summary>
+            <p>Bugs go to the <a href="https://github.com/axxalab/axxa-agent/issues/new?template=bug_report.yml">bug report form</a>, questions and ideas to <a href="https://github.com/axxalab/axxa-agent/discussions">Discussions</a>.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-end" aria-labelledby="end-title">
+  <div class="wrap">
+    <div class="sec-grid">
+      <p class="sec-label mono"><span class="n">09</span>Install</p>
+      <div class="sec-main">
+        <h2 id="end-title" class="end-title">Try it in your vault</h2>
+        <div class="ctas">
+          <a class="btn btn-primary" href="https://community.obsidian.md/plugins/axxa-agent">Add to Obsidian<svg class="arr" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <a class="btn btn-line" href="obsidian://show-plugin?id=axxa-agent">Open in the Obsidian app</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<footer><div class="wrap">
-  <div>© 2026 AXXA Lab™ · AXXA Agent is an independent plugin, not made by Obsidian.</div>
-  <nav aria-label="Footer">
-    <a href="https://community.obsidian.md/plugins/axxa-agent">Obsidian directory</a>
-    <a href="https://github.com/axxalab/axxa-agent">GitHub</a>
-    <a href="https://github.com/axxalab/axxa-agent/releases">Changelog</a>
-    <a href="https://github.com/axxalab/axxa-agent/discussions">Discussions</a>
-    <a href="/privacy">Privacy</a>
-    <a href="mailto:contato@axxalab.com.br">contato@axxalab.com.br</a>
-    <a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a>
-  </nav>
-</div></footer>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-id">
+      <p class="foot-mark"><span class="wm-name">AXXA</span> <span class="wm-prod">Agent</span></p>
+      <p>© 2026 AXXA Lab™</p>
+      <p>AXXA Agent is an independent plugin, not made by Obsidian.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <ul>
+        <li><a href="https://community.obsidian.md/plugins/axxa-agent">Obsidian directory</a></li>
+        <li><a href="https://github.com/axxalab/axxa-agent">GitHub</a></li>
+        <li><a href="https://github.com/axxalab/axxa-agent/releases">Changelog</a></li>
+        <li><a href="https://github.com/axxalab/axxa-agent/discussions">Discussions</a></li>
+      </ul>
+      <ul>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="mailto:contato@axxalab.com.br">contato@axxalab.com.br</a></li>
+        <li><a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>
