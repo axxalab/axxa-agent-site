@@ -113,3 +113,5 @@ footer a { color: var(--muted); }
 .media { margin: 0; }
 section.tight { padding-top: 0; }
 .after-grid { margin-top: 20px; }
+.cta-end { text-align: center; padding-bottom: 24px; }
+.cta-end .ctas { justify-content: center; margin-top: 16px; }
