@@ -1,10 +1,13 @@
 {
-  // Site estático do AXXA Agent (agent.axxalab.com.br), servido como assets de um Worker.
-  // Cada push na main publica pela integração Git da Cloudflare.
+  // Site estático do AXXA Agent, servido como assets de um Worker.
+  // Deploy: npx wrangler deploy (o domínio próprio cria o DNS e o certificado sozinho).
   "name": "axxa-agent-site",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./public",
     "not_found_handling": "404-page"
-  }
+  },
+  "routes": [{ "pattern": "agent.axxalab.com.br", "custom_domain": true }],
+  "workers_dev": false,
+  "preview_urls": false
 }
