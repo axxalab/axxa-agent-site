@@ -35,6 +35,8 @@
   <ul>
     <li>O plugin roda no seu aparelho, dentro do Obsidian. Não tem telemetria e não manda nada pra nós.</li>
     <li>Quando você usa um provedor de IA (OpenAI, Anthropic, Google Gemini, OpenRouter, NVIDIA NIM, ElevenLabs ou o seu servidor Ollama), o seu aparelho manda as suas mensagens, os anexos e os trechos de notas que o plugin usa direto pra esse provedor, com a chave de API que você configurou. Cada provedor trata esses dados pelos próprios termos e política de privacidade.</li>
+    <li>Nas conversas de Vault Q&amp;A e Agent, um interruptor por conversa nasce ligado: trechos das notas que combinam com a sua mensagem vão junto dela pro provedor do chat. No Chat ele nasce desligado.</li>
+    <li>As respostas aparecem como Markdown, então um link de imagem dentro de uma resposta é carregado de onde ele aponta, e esse servidor vê o seu endereço IP. Páginas da web só são buscadas quando você pede.</li>
     <li>As suas chaves de API ficam no seu aparelho, no cofre do sistema operacional, pelo armazenamento seguro do Obsidian.</li>
     <li>Conversas, o índice do Vault Q&amp;A, skills e relatórios ficam salvos como arquivos no seu vault.</li>
     <li>A lista completa do que o plugin envia, e pra quem, está nas <a href="https://github.com/axxalab/axxa-agent/blob/main/README.pt-BR.md#declarações">Declarações</a> do README.</li>
