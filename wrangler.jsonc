@@ -1,0 +1,10 @@
+{
+  // Site estático do AXXA Agent (agent.axxalab.com.br), servido como assets de um Worker.
+  // Cada push na main publica pela integração Git da Cloudflare.
+  "name": "axxa-agent-site",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}
