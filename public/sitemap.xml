@@ -6,4 +6,8 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/"/></url>
   <url><loc>https://agent.axxalab.com.br/privacy</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://agent.axxalab.com.br/pt/privacidade</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://agent.axxalab.com.br/support</loc><lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://agent.axxalab.com.br/pt/apoiar"/></url>
+  <url><loc>https://agent.axxalab.com.br/pt/apoiar</loc><lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/support"/></url>
 </urlset>
