@@ -669,7 +669,7 @@ h3 {
   height: 26px;
 }
 .bar-fill { display: block; height: 100%; }
-.fill-axxa { width: 11.6%; background: var(--ink); }      /* 0.46 MB on a 4 MB scale */
+.fill-axxa { width: 12.3%; background: var(--ink); }      /* 0.49 MB on a 4 MB scale */
 .fill-median { width: 95%; background: var(--bar-2); }    /* 3.8 MB on a 4 MB scale */
 .axis {
   position: relative;
