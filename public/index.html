@@ -102,10 +102,12 @@
             <tr role="row"><th scope="row" role="rowheader">price</th><td class="v" role="cell">Free</td><td class="n" role="cell">No tier and no license key. You pay your AI provider directly; the plugin takes no cut.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">license</th><td class="v" role="cell">GPL-3.0</td><td class="n" role="cell"><a href="https://github.com/axxalab/axxa-agent">Source on GitHub</a>.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">requires</th><td class="v" role="cell"><span class="obsidian-chip" aria-hidden="true"></span>Obsidian 1.11.4+</td><td class="n" role="cell">Windows, macOS, Linux, Android and iOS.</td></tr>
-            <tr role="row"><th scope="row" role="rowheader">size</th><td class="v" role="cell">~0.5 MB</td><td class="n" role="cell">493 KB of JavaScript in version 0.9.22.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">language</th><td class="v" role="cell">EN · PT-BR</td><td class="n" role="cell">Follows Obsidian’s language by default, or pick one in Settings › Chat › Language.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">size</th><td class="v" role="cell">&lt; 1 MB</td><td class="n" role="cell">{SIZE_KB} KB of JavaScript in version 0.9.23.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">providers</th><td class="v" role="cell">6</td><td class="n" role="cell">OpenAI, Anthropic, Google Gemini, OpenRouter, NVIDIA NIM, Ollama.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">api_keys</th><td class="v" role="cell">Your own</td><td class="n" role="cell">One per provider you use. Ollama needs none.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">storage</th><td class="v" role="cell">Markdown</td><td class="n" role="cell">Chats, skills and cost reports are notes in your vault.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">spending</th><td class="v" role="cell">Daily limit</td><td class="n" role="cell">Optional. Warns at 80% and 100%, and can pause paid models until midnight.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">telemetry</th><td class="v" role="cell">None</td><td class="n" role="cell">Nothing is sent to AXXA Lab.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">review</th><td class="v" role="cell">Passed</td><td class="n" role="cell">Obsidian’s automated plugin review.</td></tr>
           </tbody>
@@ -152,7 +154,7 @@
       <div class="mode">
         <h3>Agent</h3>
         <div class="mode-text">
-          <p>Creates, edits, moves and deletes notes through a small set of tools. By default every change waits for your OK, and a setting lets edits, or everything, run on their own. Moves and deletes go through Obsidian itself, so your link and trash settings apply.</p>
+          <p>Creates, edits, moves and deletes notes, and searches the web if you allow it. By default every change waits for your OK, and a setting lets edits, or everything, run on their own. Every change has an Undo while Obsidian stays open.</p>
         </div>
         <figure class="fig">
           <div class="plate"><picture><source media="(max-width: 719px)" srcset="/assets/img/crop-agent-sm.png 450w, /assets/img/crop-agent.png 900w" sizes="330px" width="450" height="460"><img class="shot" src="/assets/img/screen-agent-sm.png" srcset="/assets/img/screen-agent-sm.png 450w, /assets/img/screen-agent.png 900w" sizes="(min-width: 1024px) 340px, (min-width: 720px) 28vw, 330px" width="450" height="741" alt="The agent asks before moving a note, showing the tool, the old path and the new one, with Deny, Approve all and Approve" loading="lazy"></picture></div>
@@ -166,6 +168,14 @@
         <li><h3>Keyboard-aware</h3><p>The composer stays above the on-screen keyboard.</p></li>
         <li><h3>Fullscreen if you want it</h3><p>An optional mode gives the panel the whole screen.</p></li>
         <li><h3>Nothing left out</h3><p>All three modes, confirmations included, run in Obsidian’s mobile app.</p></li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3 class="sub-label mono">In your note</h3>
+      <ul class="facts">
+        <li><h3>Rewrite, fix, translate</h3><p>Select text and right-click, or use the command palette. The result goes straight into the note, and Ctrl/Cmd+Z undoes it.</p></li>
+        <li><h3>Continue writing</h3><p>The model picks up where the note stops. On the phone, the commands can sit on the editor toolbar.</p></li>
+        <li><h3>Ask about this note</h3><p>Ask about or summarize the note you’re in, or attach it to any chat with <b>+ › This note</b>.</p></li>
       </ul>
     </div>
   </div>
@@ -202,12 +212,12 @@
     <div class="sec-grid">
       <p class="sec-label mono"><span class="n">04</span>Size</p>
       <div class="sec-main">
-        <h2 id="size-title">About half a megabyte of JavaScript</h2>
+        <h2 id="size-title">Under 1&nbsp;MB of JavaScript</h2>
         <p class="body-l measure">The 12 most-downloaded AI plugins in the Obsidian directory have a median of about 3.8&nbsp;MB.</p>
         <figure class="chart">
-          <div class="bars" role="img" aria-label="Bar chart: AXXA Agent is about 0.49 MB; the median of the 12 most-downloaded AI plugins is about 3.8 MB.">
+          <div class="bars" role="img" aria-label="Bar chart: AXXA Agent is about {SIZE_MB} MB; the median of the 12 most-downloaded AI plugins is about 3.8 MB.">
             <div class="bar-row">
-              <p class="bar-head mono"><b>0.49 MB</b> AXXA Agent 0.9.22</p>
+              <p class="bar-head mono"><b>{SIZE_MB} MB</b> AXXA Agent 0.9.23</p>
               <span class="bar-track"><span class="bar-fill fill-axxa"></span></span>
             </div>
             <div class="bar-row">
@@ -288,11 +298,11 @@
       <p class="sec-label mono"><span class="n">07</span>Privacy</p>
       <div class="sec-main">
         <h2 id="privacy-title">Your notes stay yours</h2>
-        <p class="body-l">What leaves your device goes to one place: the AI provider you picked.</p>
+        <p class="body-l">What leaves your device goes where you point it: the AI provider you picked, and the web only if you allow it.</p>
         <ul class="facts">
           <li><h3>Keys on your device</h3><p>Stored in your OS keychain through Obsidian’s secret storage, never in the plugin’s settings file, so they don’t travel through Sync or backups.</p></li>
           <li><h3>Only the provider you chose</h3><p>Your notes leave the device only as part of a conversation or the Vault Q&amp;A index. The index itself stays in your vault.</p></li>
-          <li><h3>Offline with Ollama</h3><p>Chat and the agent run fully on your machine with a local model. Vault Q&amp;A then searches by keyword, because the embedding models are cloud services.</p></li>
+          <li><h3>Fully local with Ollama</h3><p>With a local chat model and a local embedding model, chat, the agent and Vault Q&amp;A run entirely on your machine. Nothing goes to a cloud service.</p></li>
         </ul>
         <p class="note">Every network request the plugin makes is listed in the <a href="https://github.com/axxalab/axxa-agent#disclosures">Disclosures</a>. This site’s own practices are in the <a href="/privacy">privacy policy</a>.</p>
       </div>
@@ -321,7 +331,7 @@
           </details>
           <details>
             <summary>What leaves my device?</summary>
-            <p>Only what goes to the provider you chose: your messages, what you attach, and the note excerpts that Vault Q&amp;A and the agent use. Nothing goes to AXXA Lab.</p>
+            <p>Only what goes to the provider you chose: your messages, what you attach, and the note excerpts that Vault Q&amp;A and the agent use. If you turn on web access, the agent’s searches go to Tavily with your own key, and it opens the pages it reads. Nothing goes to AXXA Lab.</p>
           </details>
           <details>
             <summary>Can I keep other AI plugins installed?</summary>

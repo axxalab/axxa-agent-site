@@ -65,7 +65,7 @@
 
 <section class="wrap hero" aria-labelledby="hero-title">
   <div class="hero-top">
-    <p class="kicker mono"><span class="obsidian-chip" aria-hidden="true"></span>Plugin do Obsidian · desktop e celular</p>
+    <p class="kicker mono"><span class="obsidian-chip" aria-hidden="true"></span>Plugin do Obsidian · desktop e celular · em português</p>
     <h1 id="hero-title">O agente de IA do Obsidian, feito primeiro pro celular.</h1>
     <p class="lede">Converse com um modelo, pergunte ao seu vault e receba respostas que citam as suas notas, ou passe as edições pra um agente que, por padrão, pergunta antes de cada mudança.</p>
     <div class="ctas">
@@ -102,11 +102,12 @@
             <tr role="row"><th scope="row" role="rowheader">preço</th><td class="v" role="cell">Grátis</td><td class="n" role="cell">Sem plano e sem chave de licença. Você paga o provedor de IA direto; o plugin não fica com nada.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">licença</th><td class="v" role="cell">GPL-3.0</td><td class="n" role="cell"><a href="https://github.com/axxalab/axxa-agent">Código no GitHub</a>.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">requer</th><td class="v" role="cell"><span class="obsidian-chip" aria-hidden="true"></span>Obsidian 1.11.4+</td><td class="n" role="cell">Windows, macOS, Linux, Android e iOS.</td></tr>
-            <tr role="row"><th scope="row" role="rowheader">idioma</th><td class="v" role="cell">Inglês</td><td class="n" role="cell">A interface do plugin é em inglês. As conversas podem ser em português.</td></tr>
-            <tr role="row"><th scope="row" role="rowheader">tamanho</th><td class="v" role="cell">~0,5 MB</td><td class="n" role="cell">493 KB de JavaScript na versão 0.9.22.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">idioma</th><td class="v" role="cell">PT-BR · EN</td><td class="n" role="cell">A interface inteira em português do Brasil. Segue o idioma do Obsidian por padrão, ou escolha em Configurações › Chat › Idioma.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">tamanho</th><td class="v" role="cell">&lt; 1 MB</td><td class="n" role="cell">{SIZE_KB} KB de JavaScript na versão 0.9.23.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">provedores</th><td class="v" role="cell">6</td><td class="n" role="cell">OpenAI, Anthropic, Google Gemini, OpenRouter, NVIDIA NIM, Ollama.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">chaves_api</th><td class="v" role="cell">As suas</td><td class="n" role="cell">Uma por provedor que você usa. O Ollama não precisa.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">arquivos</th><td class="v" role="cell">Markdown</td><td class="n" role="cell">Conversas, skills e relatórios de custo são notas no seu vault.</td></tr>
+            <tr role="row"><th scope="row" role="rowheader">gasto</th><td class="v" role="cell">Limite diário</td><td class="n" role="cell">Opcional. Avisa em 80% e 100%, e pode pausar os modelos pagos até a meia-noite.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">telemetria</th><td class="v" role="cell">Nenhuma</td><td class="n" role="cell">Nada é enviado pra AXXA Lab.</td></tr>
             <tr role="row"><th scope="row" role="rowheader">revisão</th><td class="v" role="cell">Passed</td><td class="n" role="cell">Na revisão automática de plugins do Obsidian.</td></tr>
           </tbody>
@@ -153,7 +154,7 @@
       <div class="mode">
         <h3>Agent</h3>
         <div class="mode-text">
-          <p>Cria, edita, move e apaga notas por um conjunto pequeno de ferramentas. Por padrão, toda mudança espera o seu OK, e uma configuração deixa as edições, ou tudo, rodarem sozinhas. Mover e apagar passam pelo próprio Obsidian, então valem as suas configurações de links e de lixeira.</p>
+          <p>Cria, edita, move e apaga notas, e busca na web se você deixar. Por padrão, toda mudança espera o seu OK, e uma configuração deixa as edições, ou tudo, rodarem sozinhas. Toda mudança tem Desfazer enquanto o Obsidian estiver aberto.</p>
         </div>
         <figure class="fig">
           <div class="plate"><picture><source media="(max-width: 719px)" srcset="/assets/img/crop-agent-sm.png 450w, /assets/img/crop-agent.png 900w" sizes="330px" width="450" height="460"><img class="shot" src="/assets/img/screen-agent-sm.png" srcset="/assets/img/screen-agent-sm.png 450w, /assets/img/screen-agent.png 900w" sizes="(min-width: 1024px) 340px, (min-width: 720px) 28vw, 330px" width="450" height="741" alt="O agente pergunta antes de mover uma nota, mostrando a ferramenta, o caminho antigo e o novo, com Deny, Approve all e Approve" loading="lazy"></picture></div>
@@ -167,6 +168,14 @@
         <li><h3>Acompanha o teclado</h3><p>O composer fica acima do teclado da tela.</p></li>
         <li><h3>Tela cheia, se quiser</h3><p>Um modo opcional dá a tela inteira pro painel.</p></li>
         <li><h3>Nada fica de fora</h3><p>Os três modos, com as confirmações, rodam no app do Obsidian no celular.</p></li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3 class="sub-label mono">Na sua nota</h3>
+      <ul class="facts">
+        <li><h3>Reescrever, corrigir, traduzir</h3><p>Selecione o texto e use o botão direito, ou a paleta de comandos. O resultado entra direto na nota, e Ctrl/Cmd+Z desfaz.</p></li>
+        <li><h3>Continuar escrevendo</h3><p>O modelo continua de onde a nota parou. No celular, os comandos podem ficar na barra do editor.</p></li>
+        <li><h3>Perguntar sobre esta nota</h3><p>Pergunte sobre a nota aberta ou resuma ela, ou anexe a nota a qualquer conversa com <b>+ › Esta nota</b>.</p></li>
       </ul>
     </div>
   </div>
@@ -203,12 +212,12 @@
     <div class="sec-grid">
       <p class="sec-label mono"><span class="n">04</span>Tamanho</p>
       <div class="sec-main">
-        <h2 id="tamanho-title">Cerca de meio megabyte de JavaScript</h2>
+        <h2 id="tamanho-title">Menos de 1&nbsp;MB de JavaScript</h2>
         <p class="body-l measure">Os 12 plugins de IA mais baixados do diretório do Obsidian têm mediana de uns 3,8&nbsp;MB.</p>
         <figure class="chart">
-          <div class="bars" role="img" aria-label="Gráfico de barras: o AXXA Agent tem uns 0,49 MB; a mediana dos 12 plugins de IA mais baixados é de uns 3,8 MB.">
+          <div class="bars" role="img" aria-label="Gráfico de barras: o AXXA Agent tem uns {SIZE_MB_PT} MB; a mediana dos 12 plugins de IA mais baixados é de uns 3,8 MB.">
             <div class="bar-row">
-              <p class="bar-head mono"><b>0,49 MB</b> AXXA Agent 0.9.22</p>
+              <p class="bar-head mono"><b>{SIZE_MB_PT} MB</b> AXXA Agent 0.9.23</p>
               <span class="bar-track"><span class="bar-fill fill-axxa"></span></span>
             </div>
             <div class="bar-row">
@@ -289,11 +298,11 @@
       <p class="sec-label mono"><span class="n">07</span>Privacidade</p>
       <div class="sec-main">
         <h2 id="privacidade-title">As suas notas continuam suas</h2>
-        <p class="body-l">O que sai do seu aparelho vai pra um lugar só: o provedor de IA que você escolheu.</p>
+        <p class="body-l">O que sai do seu aparelho vai pra onde você manda: o provedor de IA que você escolheu, e a web só se você deixar.</p>
         <ul class="facts">
           <li><h3>Chaves no seu aparelho</h3><p>Guardadas no cofre do sistema pelo armazenamento seguro do Obsidian, nunca no arquivo de configuração do plugin, então não viajam pelo Sync nem por backup.</p></li>
           <li><h3>Só o provedor que você escolheu</h3><p>As suas notas só saem do aparelho numa conversa ou no índice do Vault Q&amp;A. O índice em si fica no vault.</p></li>
-          <li><h3>Offline com o Ollama</h3><p>O chat e o agente rodam inteiros na sua máquina com um modelo local. O Vault Q&amp;A então busca por palavra-chave, porque os modelos de embedding são serviços na nuvem.</p></li>
+          <li><h3>Tudo local com o Ollama</h3><p>Com um modelo de chat e um de embedding locais, o chat, o agente e o Vault Q&amp;A rodam inteiros na sua máquina. Nada vai pra um serviço na nuvem.</p></li>
         </ul>
         <p class="note">Cada requisição de rede do plugin está listada nas <a href="https://github.com/axxalab/axxa-agent/blob/main/README.pt-BR.md#declarações">Declarações</a>. As práticas deste site estão na <a href="/pt/privacidade">política de privacidade</a>.</p>
       </div>
@@ -322,7 +331,7 @@
           </details>
           <details>
             <summary>O que sai do meu aparelho?</summary>
-            <p>Só o que vai pro provedor que você escolheu: as suas mensagens, o que você anexa e os trechos de notas que o Vault Q&amp;A e o agente usam. Nada vai pra AXXA Lab.</p>
+            <p>Só o que vai pro provedor que você escolheu: as suas mensagens, o que você anexa e os trechos de notas que o Vault Q&amp;A e o agente usam. Se você ligar o acesso à web, as buscas do agente vão pro Tavily com a sua própria chave, e ele abre as páginas que lê. Nada vai pra AXXA Lab.</p>
           </details>
           <details>
             <summary>Posso manter outros plugins de IA instalados?</summary>
@@ -330,7 +339,7 @@
           </details>
           <details>
             <summary>A interface é em português?</summary>
-            <p>Ainda não, ela é em inglês. Mas você pode conversar com o modelo em português.</p>
+            <p>Sim, inteira, desde a versão 0.9.23. Em instalações novas ela segue o idioma do Obsidian. Se você já usava, escolha <b>Português (Brasil)</b> ou <b>Igual ao Obsidian</b> em Settings › Chat › Language. Os nomes dos comandos mudam depois que você recarrega o Obsidian.</p>
           </details>
           <details>
             <summary>Onde reporto um bug ou faço uma pergunta?</summary>
