@@ -8,111 +8,146 @@
 <meta name="description" content="How the AXXA Agent website and the AXXA Agent plugin for Obsidian handle your data: no cookies, no analytics, no telemetry.">
 <link rel="canonical" href="https://agent.axxalab.com.br/privacy">
 <link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/privacy">
+<link rel="alternate" hreflang="x-default" href="https://agent.axxalab.com.br/privacy">
 <link rel="alternate" hreflang="pt-BR" href="https://agent.axxalab.com.br/pt/privacidade">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-head">
-  <div class="wrap head-row">
-    <a class="wordmark" href="/"><span class="wm-name">AXXA</span> <span class="wm-prod">Agent</span><span class="wm-by">by AXXA Lab™</span></a>
-    <nav class="head-nav" aria-label="Main">
+<header class="head">
+  <div class="wrap head-in">
+    <a class="wm" href="/"><b>AXXA</b> <span>Agent</span> <span class="wm-by">by AXXA&nbsp;Lab™</span></a>
+    <nav class="nav" aria-label="Main">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/privacy" aria-current="page">Privacy</a></li>
+        <li><a href="/#answer">How it works</a></li>
+        <li><a href="/#agent">Agent</a></li>
+        <li><a href="/#privacy">Privacy</a></li>
+        <li><a href="/#spec">Spec</a></li>
+        <li><a href="/#faq">FAQ</a></li>
         <li><a href="https://github.com/axxalab/axxa-agent">GitHub</a></li>
-        <li class="lang"><a href="/pt/privacidade" hreflang="pt-BR" lang="pt-BR">Português</a></li>
+        <li class="sep-li" aria-hidden="true"><span class="sep"></span></li>
+        <li><a href="/pt/privacidade" hreflang="pt-BR" lang="pt-BR">Português</a></li>
       </ul>
     </nav>
-    <details class="menu">
-      <summary>Menu<span class="menu-icon" aria-hidden="true"></span></summary>
-      <nav aria-label="Main">
+    <a class="btn btn-ink" href="https://community.obsidian.md/plugins/axxa-agent">Install</a>
+    <a class="menu-btn" href="#menu"><span>Menu</span><span class="menu-bars" aria-hidden="true"></span></a>
+    <nav class="menu-sheet" id="menu" aria-label="Main">
+        <a class="menu-close" href="#_">Close menu</a>
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href="/#answer">How it works</a></li>
+          <li><a href="/#agent">Agent</a></li>
+          <li><a href="/#privacy">Privacy</a></li>
+          <li><a href="/#spec">Spec</a></li>
+          <li><a href="/#faq">FAQ</a></li>
           <li><a href="https://github.com/axxalab/axxa-agent">GitHub</a></li>
           <li><a href="/pt/privacidade" hreflang="pt-BR" lang="pt-BR">Português</a></li>
         </ul>
-      </nav>
-    </details>
+    </nav>
   </div>
 </header>
 
-<main id="main" class="wrap doc">
-  <div class="doc-grid">
-    <aside class="doc-side mono" aria-label="About this policy">
-      <dl>
-        <div><dt>Document</dt><dd>Privacy policy</dd></div>
-        <div><dt>Last updated</dt><dd>October 3, 2026</dd></div>
-        <div><dt>Contact</dt><dd><a href="mailto:contato@axxalab.com.br">contato@axxalab.com.br</a></dd></div>
-      </dl>
-    </aside>
-    <article class="doc-body">
-      <h1>Privacy policy</h1>
-      <p class="doc-lede">This policy covers this website and the AXXA Agent plugin for Obsidian, both made by AXXA Lab™. In short: we don’t collect your data, unless you sponsor the project. The website sets no cookies and runs no analytics, and the plugin has no telemetry.</p>
+<main id="main">
+  <div class="wrap doc-head">
+    <p class="eyebrow"><span class="chip" aria-hidden="true"></span>AXXA Agent · privacy</p>
+    <h1 class="h2">Privacy policy.</h1>
+    <p class="body-l">This policy covers this website and the AXXA Agent plugin for Obsidian, both made by AXXA Lab™. In short: we don’t collect your data, except what you choose to send us by email or share when you sponsor the project. The website sets no cookies and runs no analytics, and the plugin has no telemetry.</p>
+    <p class="updated">last updated&nbsp;· 6 October 2026&nbsp;· contact&nbsp;· <a href="mailto:contato@axxalab.com.br">contato@axxalab.com.br</a></p>
+  </div>
 
-      <h2><span class="n">01</span>Who is responsible</h2>
+  <div class="wrap doc doc-grid">
+    <nav class="doc-rail" aria-label="On this page">
+      <ol>
+        <li><a href="#who"><span>01</span>Who is responsible</a></li>
+        <li><a href="#site"><span>02</span>This website</a></li>
+        <li><a href="#plugin"><span>03</span>The plugin</a></li>
+        <li><a href="#services"><span>04</span>GitHub and Obsidian</a></li>
+        <li><a href="#sponsors"><span>05</span>Sponsorships</a></li>
+        <li><a href="#rights"><span>06</span>Your rights</a></li>
+        <li><a href="#changes"><span>07</span>Changes</a></li>
+        <li><a href="#contact"><span>08</span>Contact</a></li>
+      </ol>
+    </nav>
+    <article class="doc-body">
+      <h2 id="who"><span class="n">01</span> Who is responsible</h2>
       <p>AXXA Lab™, the developer of AXXA Agent, based in Brazil, is the data controller for this website. Write to <a href="mailto:contato@axxalab.com.br">contato@axxalab.com.br</a> for any privacy question. That address is the privacy channel; as a small processing agent, AXXA Lab™ has not appointed a data protection officer (ANPD Resolution 2/2022, art. 11).</p>
 
-      <h2><span class="n">02</span>This website</h2>
+      <h2 id="site"><span class="n">02</span> This website</h2>
       <ul>
         <li>It is a static site. It has no forms, no accounts, no cookies, no analytics and no advertising.</li>
-        <li>Everything it shows (text, fonts, styles, images) is served from this domain. It loads no third-party fonts, scripts or trackers.</li>
+        <li>Everything it shows (text, fonts, styles, images and video) is served from this domain. It loads no third-party fonts, scripts or trackers.</li>
         <li>The site is hosted on GitHub Pages, and Cloudflare answers the DNS lookups for its domain. Like any web server, GitHub receives the technical data your browser sends to load a page (such as your IP address and browser type) and may keep it in logs for security and to deliver the site. That processing is governed by the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>, and DNS by the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>. We don’t use those logs. The legal basis is legitimate interest in keeping the site available and secure (LGPD art. 7, IX).</li>
       </ul>
 
-      <h2><span class="n">03</span>The AXXA Agent plugin</h2>
+      <h2 id="plugin"><span class="n">03</span> The AXXA Agent plugin</h2>
       <ul>
         <li>The plugin runs on your device, inside Obsidian. It has no telemetry and sends nothing to us.</li>
-        <li>When you use an AI provider (OpenAI, Anthropic, Google Gemini, OpenRouter, NVIDIA NIM, ElevenLabs, or your own Ollama server), your device sends your messages, attachments and the note excerpts the plugin uses directly to that provider, with the API key you configured. Each provider handles that data under its own terms and privacy policy.</li>
+        <li>When you use an AI provider (OpenAI, Anthropic, Google Gemini, OpenRouter, NVIDIA NIM, ElevenLabs, or your own Ollama server), your device sends it directly, with the API key you configured, what that feature needs. The chat provider gets your messages, your attachments and the note excerpts used as context; in Agent mode it also gets the notes the agent reads and the results of its actions. The embedding provider gets the text of your notes, and images with a model that reads them, while the Vault Q&amp;A index is built. Dictation sends your recording to OpenAI, and read aloud sends the answer’s text to OpenAI or ElevenLabs. Each provider handles that data under its own terms and privacy policy. With an Ollama model, that traffic stays between your device and your own server.</li>
         <li>In Vault Q&amp;A and Agent conversations, a per-chat switch starts on: excerpts of the notes that match your message are sent with it to the chat provider. In Chat it starts off.</li>
-        <li>Answers are shown as Markdown, so an image link inside an answer is loaded from wherever it points, and that server sees your IP address. Web pages are fetched only when you ask.</li>
-        <li>Your API keys are stored on your device, in your operating system’s keychain through Obsidian’s secret storage.</li>
+        <li>The agent’s Web access is on by default (Settings › AXXA Agent › Agent). With it, the agent can open public web pages and, with your own Tavily key, search the web through Tavily’s search API. Tavily receives the search the agent wrote, and a page it opens receives a plain request for that address. In the Ask and Vault permission levels each search and address waits for your OK, unless you chose Approve all earlier in that turn; in YOLO they run without asking.</li>
+        <li>Answers are shown as Markdown, so an image link inside an answer is loaded from wherever it points, and that server sees your IP address. A page you attach with + › Link is fetched only when you ask.</li>
+        <li>Your API keys are stored on your device in Obsidian’s secret storage, not in the plugin’s settings file. On computers, Obsidian encrypts them with your operating system’s protection (Keychain, Windows data protection or the Linux keyring) when it is available; on phones they go to the system’s secure storage.</li>
         <li>Chats, the Vault Q&amp;A index, skills and reports are saved as files in your vault.</li>
         <li>The full list of what the plugin sends, and to whom, is in the <a href="https://github.com/axxalab/axxa-agent#disclosures">Disclosures</a> section of its README.</li>
       </ul>
 
-      <h2><span class="n">04</span>GitHub and the Obsidian directory</h2>
+      <h2 id="services"><span class="n">04</span> GitHub and the Obsidian directory</h2>
       <p>If you open an issue, start a discussion or install the plugin from the Obsidian community directory, those services handle your data under their own policies (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>, <a href="https://obsidian.md/privacy">Obsidian</a>).</p>
 
-      <h2 id="sponsors"><span class="n">05</span>Sponsorships</h2>
+      <h2 id="sponsors"><span class="n">05</span> Sponsorships</h2>
       <p>If you sponsor AXXA Agent through GitHub Sponsors, GitHub processes the payment under its own privacy statement. We then see your GitHub username and the sponsorship, and your email address only if you choose to share it with us. We use this only to thank you and to keep the records the law requires (legal bases: LGPD art. 7, IX and II). Sponsoring gives nothing in the plugin and is never required.</p>
 
-      <h2><span class="n">06</span>Your rights</h2>
+      <h2 id="rights"><span class="n">06</span> Your rights</h2>
       <p>Under Brazil’s General Data Protection Law (LGPD) and similar laws, you can ask whether we hold data about you, and ask for access, correction or deletion. Because neither this website nor the plugin sends personal data to us, we normally hold none, apart from sponsorships. If you contact us, we use your message only to answer it (legal basis: LGPD art. 7, IX) and delete it when the conversation is no longer needed. You can also file a complaint with Brazil’s data protection authority (ANPD).</p>
 
-      <h2><span class="n">07</span>Changes</h2>
+      <h2 id="changes"><span class="n">07</span> Changes</h2>
       <p>If this policy changes, the new version will be posted on this page with a new date. If a paid option is added in the future, this page will be updated before it launches, to explain what the payment provider processes.</p>
 
-      <h2><span class="n">08</span>Contact</h2>
+      <h2 id="contact"><span class="n">08</span> Contact</h2>
       <p>Email <a href="mailto:contato@axxalab.com.br">contato@axxalab.com.br</a>. You can also write in <a href="https://github.com/axxalab/axxa-agent/discussions">GitHub Discussions</a>, or report a security problem privately through <a href="https://github.com/axxalab/axxa-agent/security/advisories/new">GitHub’s private reporting</a>.</p>
     </article>
   </div>
 </main>
 
-<footer class="site-foot">
-  <div class="wrap foot-grid">
-    <div class="foot-id">
-      <p class="foot-mark"><span class="wm-name">AXXA</span> <span class="wm-prod">Agent</span></p>
-      <p>© 2026 AXXA Lab™</p>
-      <p>AXXA Agent is an independent plugin, not made by Obsidian.</p>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <nav aria-labelledby="f-product">
+        <h2 id="f-product">product</h2>
+        <ul>
+          <li><a href="https://community.obsidian.md/plugins/axxa-agent">Install</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent">Source on GitHub</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent/releases">Releases</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent#disclosures">Disclosures</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-help">
+        <h2 id="f-help">help</h2>
+        <ul>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent/issues/new?template=bug_report.yml">Report a bug</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent/discussions">Discussions</a></li>
+          <li><a href="mailto:contato@axxalab.com.br">contato@axxalab.com.br</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-lab">
+        <h2 id="f-lab" class="brand">AXXA Lab™</h2>
+        <ul>
+          <li><a href="/support">Support the project</a></li>
+          <li><a href="/privacy" aria-current="page">Privacy policy</a></li>
+          <li><a href="/pt/privacidade" hreflang="pt-BR" lang="pt-BR">Português</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="foot-nav" aria-label="Footer">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="https://community.obsidian.md/plugins/axxa-agent">Obsidian directory</a></li>
-        <li><a href="https://github.com/axxalab/axxa-agent">GitHub</a></li>
-      </ul>
-      <ul>
-        <li><a href="/support">Support</a></li>
-        <li><a href="mailto:contato@axxalab.com.br">contato@axxalab.com.br</a></li>
-        <li><a href="/pt/privacidade" hreflang="pt-BR" lang="pt-BR">Português</a></li>
-      </ul>
-    </nav>
+    <div class="foot-base">
+      <p>AXXA Agent is an independent plugin, not made by Obsidian. © 2026 AXXA&nbsp;Lab™</p>
+      <p class="colophon">No scripts, no cookies, no trackers. Set in Schibsted Grotesk and IBM Plex Mono.</p>
+    </div>
   </div>
 </footer>
 </body>

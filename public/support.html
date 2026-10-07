@@ -8,6 +8,7 @@
 <meta name="description" content="AXXA Agent is free and made by one developer. Sponsor it on GitHub, or help without paying: report bugs, star the repository, share a skill.">
 <link rel="canonical" href="https://agent.axxalab.com.br/support">
 <link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/support">
+<link rel="alternate" hreflang="x-default" href="https://agent.axxalab.com.br/support">
 <link rel="alternate" hreflang="pt-BR" href="https://agent.axxalab.com.br/pt/apoiar">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AXXA Agent">
@@ -20,111 +21,123 @@
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-head">
-  <div class="wrap head-row">
-    <a class="wordmark" href="/"><span class="wm-name">AXXA</span> <span class="wm-prod">Agent</span><span class="wm-by">by AXXA Lab™</span></a>
-    <nav class="head-nav" aria-label="Main">
+<header class="head">
+  <div class="wrap head-in">
+    <a class="wm" href="/"><b>AXXA</b> <span>Agent</span> <span class="wm-by">by AXXA&nbsp;Lab™</span></a>
+    <nav class="nav" aria-label="Main">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/support" aria-current="page">Support</a></li>
+        <li><a href="/#answer">How it works</a></li>
+        <li><a href="/#agent">Agent</a></li>
+        <li><a href="/#privacy">Privacy</a></li>
+        <li><a href="/#spec">Spec</a></li>
+        <li><a href="/#faq">FAQ</a></li>
         <li><a href="https://github.com/axxalab/axxa-agent">GitHub</a></li>
-        <li class="lang"><a href="/pt/apoiar" hreflang="pt-BR" lang="pt-BR">Português</a></li>
+        <li class="sep-li" aria-hidden="true"><span class="sep"></span></li>
+        <li><a href="/pt/apoiar" hreflang="pt-BR" lang="pt-BR">Português</a></li>
       </ul>
     </nav>
-    <details class="menu">
-      <summary>Menu<span class="menu-icon" aria-hidden="true"></span></summary>
-      <nav aria-label="Main">
+    <a class="btn btn-ink" href="https://community.obsidian.md/plugins/axxa-agent">Install</a>
+    <a class="menu-btn" href="#menu"><span>Menu</span><span class="menu-bars" aria-hidden="true"></span></a>
+    <nav class="menu-sheet" id="menu" aria-label="Main">
+        <a class="menu-close" href="#_">Close menu</a>
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href="/#answer">How it works</a></li>
+          <li><a href="/#agent">Agent</a></li>
+          <li><a href="/#privacy">Privacy</a></li>
+          <li><a href="/#spec">Spec</a></li>
+          <li><a href="/#faq">FAQ</a></li>
           <li><a href="https://github.com/axxalab/axxa-agent">GitHub</a></li>
           <li><a href="/pt/apoiar" hreflang="pt-BR" lang="pt-BR">Português</a></li>
         </ul>
-      </nav>
-    </details>
+    </nav>
   </div>
 </header>
 
 <main id="main">
-
-<section class="wrap hero hero-text" aria-labelledby="hero-title">
-  <div class="hero-top">
-    <p class="kicker mono"><span class="obsidian-chip" aria-hidden="true"></span>AXXA Agent · support</p>
-    <h1 id="hero-title">Support AXXA Agent.</h1>
-    <p class="lede">AXXA Agent is free, with no account and no license key. It’s made by one developer at AXXA Lab™, in Brazil. If it saves you time, here is how to keep it going.</p>
+  <div class="wrap doc-head">
+    <p class="eyebrow"><span class="chip" aria-hidden="true"></span>AXXA Agent · support</p>
+    <h1 class="h2">Support AXXA Agent.</h1>
+    <p class="body-l">AXXA Agent is free, with no account and no license key. It’s made by one developer at AXXA&nbsp;Lab™, in Brazil. If it saves you time, here is how to keep it going.</p>
   </div>
-</section>
 
-<section class="sec" id="sponsor" aria-labelledby="sponsor-title">
-  <div class="wrap">
-    <div class="sec-grid">
-      <p class="sec-label mono"><span class="n">01</span>Sponsor</p>
-      <div class="sec-main">
-        <h2 id="sponsor-title">Back it with money</h2>
-        <p class="body-l">A sponsorship pays for the hours that go into fixes, tests on real phones, and keeping up with six providers whose APIs keep changing.</p>
-        <div class="ctas">
-          <a class="btn btn-primary" href="https://github.com/sponsors/rafaelpsyik">Sponsor on GitHub<svg class="arr" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
-        </div>
-        <p class="note">Through GitHub Sponsors, on the account of Rafael, who makes AXXA Agent. Monthly or one time. Sponsoring unlocks nothing in the plugin: it’s a thank-you, not a purchase. What GitHub shares with us is in the <a href="/privacy#sponsors">privacy policy</a>.</p>
+  <div class="wrap doc doc-grid">
+    <nav class="doc-rail" aria-label="On this page">
+      <ol>
+        <li><a href="#sponsor"><span>01</span>Sponsor</a></li>
+        <li><a href="#help"><span>02</span>Without money</a></li>
+        <li><a href="#free"><span>03</span>What stays free</a></li>
+      </ol>
+    </nav>
+    <article class="doc-body">
+      <h2 id="sponsor"><span class="n">01</span> Back it with money</h2>
+      <p>A sponsorship pays for the hours that go into fixes, tests on real phones, and keeping up with six providers whose APIs keep changing.</p>
+      <p>It goes through GitHub Sponsors, monthly or once, on the account of Rafael, who makes AXXA Agent. Sponsoring unlocks nothing in the plugin: it’s a thank-you, not a purchase. What GitHub shares with us is in the <a href="/privacy#sponsors">privacy policy</a>.</p>
+
+      <h2 id="help"><span class="n">02</span> Or help without paying</h2>
+      <ul>
+        <li><b>Report what breaks.</b> A <a href="https://github.com/axxalab/axxa-agent/issues/new?template=bug_report.yml">bug report</a> with your platform, Obsidian version and the steps saves hours of guessing.</li>
+        <li><b>Star the repository.</b> People on GitHub judge whether a project is alive by its stars. <a href="https://github.com/axxalab/axxa-agent">One click</a>.</li>
+        <li><b>Point people to it.</b> When someone asks about AI in Obsidian on a phone, send them the <a href="https://community.obsidian.md/plugins/axxa-agent">directory page</a>.</li>
+        <li><b>Share a skill.</b> Skills are Markdown files. Post yours in <a href="https://github.com/axxalab/axxa-agent/discussions">Discussions</a> so others can use it.</li>
+      </ul>
+
+      <h2 id="free"><span class="n">03</span> Nothing you use today goes behind a paywall</h2>
+      <p>Every feature the plugin has today stays free. If paid options arrive, they will be new things built on top, never a lock on something that already worked. You pay your AI provider directly; the plugin takes no cut.</p>
+    </article>
+  </div>
+
+  <section class="band" aria-labelledby="end-title">
+    <div class="wrap">
+      <h2 id="end-title" class="h2">If it saves you time, keep it going.</h2>
+      <div class="actions">
+        <a class="btn btn-signal" href="https://github.com/sponsors/rafaelpsyik">Sponsor on GitHub<svg class="arr" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        <a class="lnk lnk-app" href="https://github.com/axxalab/axxa-agent">Star the repository</a>
       </div>
+      <p class="micro">monthly or once&nbsp;· unlocks nothing&nbsp;· a thank-you, not a purchase</p>
     </div>
-  </div>
-</section>
-
-<section class="sec" id="help" aria-labelledby="help-title">
-  <div class="wrap">
-    <div class="sec-grid">
-      <p class="sec-label mono"><span class="n">02</span>Without money</p>
-      <div class="sec-main">
-        <h2 id="help-title">Or help without paying</h2>
-        <ul class="facts facts-2">
-          <li><h3>Report what breaks</h3><p>A <a href="https://github.com/axxalab/axxa-agent/issues/new?template=bug_report.yml">bug report</a> with your platform, Obsidian version and the steps saves hours of guessing.</p></li>
-          <li><h3>Star the repository</h3><p>People on GitHub judge whether a project is alive by its stars. <a href="https://github.com/axxalab/axxa-agent">One click</a>.</p></li>
-          <li><h3>Point people to it</h3><p>When someone asks about AI in Obsidian on a phone, send them the <a href="https://community.obsidian.md/plugins/axxa-agent">directory page</a>.</p></li>
-          <li><h3>Share a skill</h3><p>Skills are Markdown files. Post yours in <a href="https://github.com/axxalab/axxa-agent/discussions">Discussions</a> so others can use it.</p></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="free" aria-labelledby="free-title">
-  <div class="wrap">
-    <div class="sec-grid">
-      <p class="sec-label mono"><span class="n">03</span>What stays free</p>
-      <div class="sec-main">
-        <h2 id="free-title">Nothing you use today goes behind a paywall</h2>
-        <p class="body-l">Every feature the plugin has today stays free. If paid options arrive, they will be new things built on top, never a lock on something that already worked. You pay your AI provider directly; the plugin takes no cut.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+  </section>
 </main>
 
-<footer class="site-foot">
-  <div class="wrap foot-grid">
-    <div class="foot-id">
-      <p class="foot-mark"><span class="wm-name">AXXA</span> <span class="wm-prod">Agent</span></p>
-      <p>© 2026 AXXA Lab™</p>
-      <p>AXXA Agent is an independent plugin, not made by Obsidian.</p>
+<footer class="foot foot--after-band">
+  <div class="wrap">
+    <div class="foot-cols">
+      <nav aria-labelledby="f-product">
+        <h2 id="f-product">product</h2>
+        <ul>
+          <li><a href="https://community.obsidian.md/plugins/axxa-agent">Install</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent">Source on GitHub</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent/releases">Releases</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent#disclosures">Disclosures</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-help">
+        <h2 id="f-help">help</h2>
+        <ul>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent/issues/new?template=bug_report.yml">Report a bug</a></li>
+          <li><a href="https://github.com/axxalab/axxa-agent/discussions">Discussions</a></li>
+          <li><a href="mailto:contato@axxalab.com.br">contato@axxalab.com.br</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-lab">
+        <h2 id="f-lab" class="brand">AXXA Lab™</h2>
+        <ul>
+          <li><a href="/support" aria-current="page">Support the project</a></li>
+          <li><a href="/privacy">Privacy policy</a></li>
+          <li><a href="/pt/apoiar" hreflang="pt-BR" lang="pt-BR">Português</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="foot-nav" aria-label="Footer">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="https://community.obsidian.md/plugins/axxa-agent">Obsidian directory</a></li>
-        <li><a href="https://github.com/axxalab/axxa-agent">GitHub</a></li>
-      </ul>
-      <ul>
-        <li><a href="/privacy">Privacy</a></li>
-        <li><a href="mailto:contato@axxalab.com.br">contato@axxalab.com.br</a></li>
-        <li><a href="/pt/apoiar" hreflang="pt-BR" lang="pt-BR">Português</a></li>
-      </ul>
-    </nav>
+    <div class="foot-base">
+      <p>AXXA Agent is an independent plugin, not made by Obsidian. © 2026 AXXA&nbsp;Lab™</p>
+      <p class="colophon">No scripts, no cookies, no trackers. Set in Schibsted Grotesk and IBM Plex Mono.</p>
+    </div>
   </div>
 </footer>
 </body>

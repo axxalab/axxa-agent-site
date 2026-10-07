@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://agent.axxalab.com.br/</loc><lastmod>2026-10-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://agent.axxalab.com.br/pt/"/></url>
-  <url><loc>https://agent.axxalab.com.br/pt/</loc><lastmod>2026-10-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/"/></url>
-  <url><loc>https://agent.axxalab.com.br/privacy</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://agent.axxalab.com.br/pt/privacidade</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://agent.axxalab.com.br/support</loc><lastmod>2026-10-03</lastmod>
+  <url><loc>https://agent.axxalab.com.br/</loc><lastmod>2026-10-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://agent.axxalab.com.br/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agent.axxalab.com.br/"/></url>
+  <url><loc>https://agent.axxalab.com.br/pt/</loc><lastmod>2026-10-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://agent.axxalab.com.br/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agent.axxalab.com.br/"/></url>
+  <url><loc>https://agent.axxalab.com.br/privacy</loc><lastmod>2026-10-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://agent.axxalab.com.br/pt/privacidade"/></url>
+  <url><loc>https://agent.axxalab.com.br/pt/privacidade</loc><lastmod>2026-10-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://agent.axxalab.com.br/pt/privacidade"/></url>
+  <url><loc>https://agent.axxalab.com.br/support</loc><lastmod>2026-10-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/support"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://agent.axxalab.com.br/pt/apoiar"/></url>
-  <url><loc>https://agent.axxalab.com.br/pt/apoiar</loc><lastmod>2026-10-03</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/support"/></url>
+  <url><loc>https://agent.axxalab.com.br/pt/apoiar</loc><lastmod>2026-10-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agent.axxalab.com.br/support"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://agent.axxalab.com.br/pt/apoiar"/></url>
 </urlset>
