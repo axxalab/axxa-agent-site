@@ -1090,7 +1090,7 @@ html[lang="pt-BR"] .display { max-width: 14.5ch; font-size: clamp(2.75rem, 1.5re
 .bar-head { font-family: var(--mono); font-size: 13px; color: var(--ink-2); margin-bottom: 8px; }
 .bar-head b { color: var(--ink); font-weight: 600; margin-right: 8px; }
 .bar { display: block; height: 14px; transform-origin: left center; }
-.bar--axxa { inline-size: 14.6%; background: var(--ink); }
+.bar--axxa { inline-size: 15.5%; background: var(--ink); }
 .bar--median { inline-size: 100%; background: var(--bar-median); }
 .axis {
   position: relative;

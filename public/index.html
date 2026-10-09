@@ -27,7 +27,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AXXA Agent", "softwareVersion": "0.9.23", "applicationCategory": "ProductivityApplication", "applicationSubCategory": "Obsidian plugin", "operatingSystem": "Windows, macOS, Linux, Android, iOS (Obsidian 1.11.4+)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "license": "https://www.gnu.org/licenses/gpl-3.0.html", "url": "https://agent.axxalab.com.br/", "downloadUrl": "https://community.obsidian.md/plugins/axxa-agent", "image": "https://agent.axxalab.com.br/assets/og.png", "author": {"@type": "Organization", "name": "AXXA Lab™", "url": "https://agent.axxalab.com.br/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AXXA Agent", "softwareVersion": "0.9.24", "applicationCategory": "ProductivityApplication", "applicationSubCategory": "Obsidian plugin", "operatingSystem": "Windows, macOS, Linux, Android, iOS (Obsidian 1.11.4+)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "license": "https://www.gnu.org/licenses/gpl-3.0.html", "url": "https://agent.axxalab.com.br/", "downloadUrl": "https://community.obsidian.md/plugins/axxa-agent", "image": "https://agent.axxalab.com.br/assets/og.png", "author": {"@type": "Organization", "name": "AXXA Lab™", "url": "https://agent.axxalab.com.br/"}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -120,8 +120,8 @@
       <li><a href="https://github.com/axxalab/axxa-agent"><span class="label">license</span><span class="v">GPL-3.0</span><span class="n">Source on GitHub</span></a></li>
       <li><a href="https://github.com/axxalab/axxa-agent#disclosures"><span class="label">telemetry</span><span class="v">None</span><span class="n">Nothing is sent to AXXA&nbsp;Lab™</span></a></li>
       <li><a href="#models"><span class="label">providers</span><span class="v">6</span><span class="n">Including local Ollama</span></a></li>
-      <li><a href="#size"><span class="label">size</span><span class="v">556 KB</span><span class="n">main.js in 0.9.23</span></a></li>
-      <li><a href="https://github.com/axxalab/axxa-agent/releases/tag/0.9.23"><span class="label">latest</span><span class="v">0.9.23</span><span class="n">6 Oct 2026</span></a></li>
+      <li><a href="#size"><span class="label">size</span><span class="v">588 KB</span><span class="n">main.js in 0.9.24</span></a></li>
+      <li><a href="https://github.com/axxalab/axxa-agent/releases/tag/0.9.24"><span class="label">latest</span><span class="v">0.9.24</span><span class="n">9 Oct 2026</span></a></li>
     </ul>
   </div>
 </section>
@@ -178,7 +178,7 @@
             </picture>
           </div>
           <p class="dim" aria-hidden="true"><span>390 × 844 · crop · <span class="t-l">light</span><span class="t-d">dark</span></span><span>Fig. 3</span></p>
-          <figcaption class="cap" id="fig3-cap"><b>Fig. 3</b> Before a move: the tool, the old path and the new one. Deny, Approve all (for the rest of this turn; deletes still ask) or Approve.</figcaption>
+          <figcaption class="cap" id="fig3-cap"><b>Fig. 3</b> Before a move: the tool, the old path and the new one. Deny, Approve all (for the rest of this turn; deletes and web requests still ask) or Approve.</figcaption>
         </figure>
         <figure class="fig" aria-labelledby="fig4-cap">
           <div class="plate">
@@ -196,7 +196,7 @@
       <ul class="ruled">
         <li><h3>Undo, per turn or per action.</h3><p>Undo under the answer reverts the whole turn, and each action has its own. It covers edits, new notes, moves, deletes and new folders while Obsidian stays open (a deleted file over 20&nbsp;MB keeps no copy, so it only goes to your trash). If you edited the note by hand since, Undo stops and asks.</p></li>
         <li><h3>Obsidian does the moving.</h3><p>Moves go through Obsidian, so links update by your own link setting, and Undo writes them back. Deletes follow your Deleted files setting.</p></li>
-        <li><h3>The web, on your terms.</h3><p>With Web access, on by default in <b>Settings&nbsp;›&nbsp;AXXA Agent&nbsp;›&nbsp;Agent</b>, the agent can open public pages, and search the web with your own Tavily key. In Ask and Vault, each search and address waits for your OK, unless you chose Approve all earlier in that turn.</p></li>
+        <li><h3>The web, on your terms.</h3><p>With Web access, on by default in <b>Settings&nbsp;›&nbsp;AXXA Agent&nbsp;›&nbsp;Agent</b>, the agent can open public pages, and search the web with your own Tavily key. In Ask and Vault, each search and address waits for your OK, unless you chose Approve all on a web request earlier in that turn.</p></li>
       </ul>
     </div>
   </div>
@@ -316,7 +316,7 @@
           <ul class="ruled">
             <li><h3>Free models, tagged.</h3><p>The model list tags each free model, with its limit where there is one, like <code>free · 50/day</code> on OpenRouter or <code>free · 40/min</code> on NVIDIA NIM.</p></li>
             <li><h3>Left today.</h3><p>What’s left on each free tier today, and when it resets.</p></li>
-            <li><h3>A daily spending limit.</h3><p>A heads-up at 80% and 100%. Paid models can pause until midnight; free and local models keep working.</p></li>
+            <li><h3>A daily spending limit.</h3><p>A heads-up at 80% and 100%. Paid models can pause until midnight (Gemini counts at its paid price, even on the free tier); free and local models keep working.</p></li>
             <li><h3>Usage you can keep.</h3><p>Tokens or estimated cost by provider, model and mode, for all time or the last 7, 30 or 90 days. Report saves it as a Markdown note.</p></li>
             <li><h3>Five effort levels.</h3><p>Low to Max, each one tunable.</p></li>
           </ul>
@@ -346,7 +346,7 @@
       <h2 id="privacy-title" class="h2"><span class="s">Your key.</span> <span class="s">Your vault.</span> <span class="s">Your machine.</span></h2>
       <ol class="tri">
         <li><span class="num">i</span><h3 class="h3">Your key.</h3><p>Bring a key from OpenAI, Anthropic, Google Gemini, OpenRouter or NVIDIA NIM, or run Ollama with none. Keys are kept in Obsidian’s secret storage, not in the plugin’s settings file, so they don’t travel through Sync or backups.</p></li>
-        <li><span class="num">ii</span><h3 class="h3">Your vault.</h3><p>Chats are saved as Markdown files in your vault, in a hidden folder by default. Skills, usage reports and exported chats are ordinary notes, and the search index lives in your vault too.</p></li>
+        <li><span class="num">ii</span><h3 class="h3">Your vault.</h3><p>Chats are saved as Markdown files in your vault, in a hidden folder by default. Each one also keeps a copy of what went with your messages (note excerpts, attached notes and pages, pasted text) and, in a long chat, the summary of its start. Skills, usage reports and exported chats are ordinary notes, and the search index lives in your vault too.</p></li>
         <li><span class="num">iii</span><h3 class="h3">Your machine.</h3><p>With Ollama, Chat, Vault Q&amp;A and the agent can all run on your own computer. The agent needs a model that supports tools.</p></li>
       </ol>
       <p class="note">Your notes go only to the services you set up, never to AXXA Lab™. No telemetry, no AXXA account. Every request the plugin can make is listed in the <a href="https://github.com/axxalab/axxa-agent#disclosures">Disclosures</a>; this site’s own practices are in the <a href="/privacy">privacy policy</a>.</p>
@@ -393,21 +393,21 @@
         <div><dt>embeddings</dt><dd><span class="val">5</span><span class="nt">OpenAI, Google Gemini, NVIDIA NIM, OpenRouter, Ollama.</span></dd></div>
         <div><dt>agent</dt><dd><span class="val">8 + 2 tools</span><span class="nt">Eight for the vault, two for the web. Ask (default), Vault or YOLO. Undo per turn or per action while Obsidian is open.</span></dd></div>
         <div><dt>api keys</dt><dd><span class="val">Your own</span><span class="nt">In Obsidian’s secret storage, not in data.json. Ollama needs none.</span></dd></div>
-        <div><dt>storage</dt><dd><span class="val">Markdown</span><span class="nt">Chats as .md files in a hidden folder by default. Skills, reports and exports are notes.</span></dd></div>
+        <div><dt>storage</dt><dd><span class="val">Markdown</span><span class="nt">Chats as .md files in a hidden folder by default, with a copy of what went with each message. Skills, reports and exports are notes.</span></dd></div>
         <div><dt>interface</dt><dd><span class="val">EN · PT-BR</span><span class="nt">English and Brazilian Portuguese, or the same as Obsidian.</span></dd></div>
         <div><dt>price</dt><dd><span class="val">Free</span><span class="nt">No tier, no license key, no AXXA account.</span></dd></div>
         <div><dt>license</dt><dd><span class="val">GPL-3.0</span><span class="nt"><a href="https://github.com/axxalab/axxa-agent">Source on GitHub</a>.</span></dd></div>
         <div><dt>requires</dt><dd><span class="val"><span class="chip" aria-hidden="true"></span>Obsidian 1.11.4+</span><span class="nt">Windows, macOS, Linux, Android, iOS.</span></dd></div>
-        <div><dt>size</dt><dd><span class="val">556 KB</span><span class="nt">main.js in 0.9.23 (556,431 bytes).</span></dd></div>
+        <div><dt>size</dt><dd><span class="val">588 KB</span><span class="nt">main.js in 0.9.24 (587,963 bytes).</span></dd></div>
         <div><dt>telemetry</dt><dd><span class="val">None</span><span class="nt">Nothing is sent to AXXA Lab™.</span></dd></div>
         <div><dt>review</dt><dd><span class="val">Passed</span><span class="nt">Obsidian’s automated review. Health: Excellent.</span></dd></div>
       </dl>
 
       <figure class="fig size" id="size" aria-labelledby="fig9-cap">
-        <h3 class="h3">556 KB of JavaScript.</h3>
+        <h3 class="h3">588 KB of JavaScript.</h3>
         <p class="body">The 12 most-downloaded AI plugins in the Obsidian directory have a median main.js of about 3.8&nbsp;MB.</p>
-        <div class="size-bars" role="img" aria-label="Bar chart: AXXA Agent 0.9.23 is 556 KB; the median of the 12 most-downloaded AI plugins is about 3.8 MB.">
-          <div><p class="bar-head"><b>556 KB</b>AXXA Agent 0.9.23</p><span class="bar bar--axxa"></span></div>
+        <div class="size-bars" role="img" aria-label="Bar chart: AXXA Agent 0.9.24 is 588 KB; the median of the 12 most-downloaded AI plugins is about 3.8 MB.">
+          <div><p class="bar-head"><b>588 KB</b>AXXA Agent 0.9.24</p><span class="bar bar--axxa"></span></div>
           <div><p class="bar-head"><b>~3.8 MB</b>median of the 12 most-downloaded AI plugins</p><span class="bar bar--median"></span></div>
           <p class="axis" aria-hidden="true"><span class="t0">0</span><span class="t1">1 MB</span><span class="t2">2 MB</span><span class="t3">3 MB</span><span class="t4">3.8 MB</span></p>
         </div>
@@ -424,10 +424,10 @@
     <div class="sec-body">
       <h2 id="releases-title" class="h2">Recent releases.</h2>
       <ul class="rel">
+        <li><span class="d">9 Oct 2026</span><span class="ver">0.9.24</span><span class="t"><a href="https://github.com/axxalab/axxa-agent/releases/tag/0.9.24">Chats keep the notes sent with each message, long chats keep going, prompt caching and a context meter.</a></span></li>
         <li><span class="d">6 Oct 2026</span><span class="ver">0.9.23</span><span class="t"><a href="https://github.com/axxalab/axxa-agent/releases/tag/0.9.23">AXXA in your notes, Undo, web access, local Vault Q&amp;A, a daily spending limit and Portuguese.</a></span></li>
         <li><span class="d">3 Oct 2026</span><span class="ver">0.9.22</span><span class="t"><a href="https://github.com/axxalab/axxa-agent/releases/tag/0.9.22">Claude 5 works again, honest free labels, every effort setting explained.</a></span></li>
         <li><span class="d">2 Oct 2026</span><span class="ver">0.9.21</span><span class="t"><a href="https://github.com/axxalab/axxa-agent/releases/tag/0.9.21">Voice previews, tunable effort levels, per-chat instructions.</a></span></li>
-        <li><span class="d">2 Oct 2026</span><span class="ver">0.9.20</span><span class="t"><a href="https://github.com/axxalab/axxa-agent/releases/tag/0.9.20">Agent with local Ollama models, composer restored.</a></span></li>
       </ul>
       <p><a class="lnk" href="https://github.com/axxalab/axxa-agent/releases">All releases on GitHub →</a></p>
     </div>
